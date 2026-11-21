@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f4">
+<title>For Moni Ji, A Little Fairytale</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+:root{--night:#10131b;--plum:#202633;--rose:#f4b9d0;--pink:#fbe3ed;--gold:#f2d36f;--cream:#fffdfb;--muted:#c8d8ee;--blue:#b9d8f4;--ink:#10131b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--night);color:var(--cream);font-family:'DM Sans',sans-serif;overflow-x:hidden}button{font:inherit}.serif{font-family:'Cormorant Garamond',serif}.stars,.stars:before,.stars:after{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(1px 1px at 12% 18%,#fff 98%,transparent),radial-gradient(1px 1px at 72% 32%,#fbe3ed 98%,transparent),radial-gradient(1px 1px at 44% 76%,#fff 98%,transparent),radial-gradient(2px 2px at 88% 82%,#f2d36f 98%,transparent),radial-gradient(1px 1px at 28% 54%,#fff 98%,transparent);background-size:310px 290px;opacity:.45;animation:twinkle 5s ease-in-out infinite alternate}.stars:before,.stars:after{content:"";inset:0;background-position:90px 120px;opacity:.5;transform:scale(1.3)}.stars:after{background-position:210px 40px;animation-delay:2s}@keyframes twinkle{to{opacity:.18}}.glow{position:fixed;width:420px;height:420px;border-radius:50%;filter:blur(90px);opacity:.15;pointer-events:none;z-index:0;background:#b34b81;top:12%;left:-180px}.glow.two{background:#7356a8;left:auto;right:-220px;top:58%}
+main,header,footer{position:relative;z-index:1}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 7vw;border-bottom:1px solid #ffffff12;letter-spacing:.12em;font-size:.68rem;text-transform:uppercase;color:#e9cbd8}.brand{font-family:'Cormorant Garamond',serif;font-size:1.4rem;letter-spacing:.05em;text-transform:none;color:var(--gold)}.nav a{color:inherit;text-decoration:none;margin-left:24px}.hero{min-height:calc(100svh, 74px);display:grid;place-items:center;text-align:center;padding:80px 22px 90px;overflow:hidden}.hero:before{content:"";position:absolute;width:min(78vw,680px);height:min(78vw,680px);border:1px solid #f2d36f30;border-radius:50%;box-shadow:0 0 100px #d779a51a,inset 0 0 80px #d779a510}.hero:after{content:"";position:absolute;width:min(65vw,560px);height:min(65vw,560px);border:1px solid #f4b9d02b;border-radius:50%}.hero-inner{max-width:850px;position:relative;z-index:2}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.28em;font-size:.68rem;margin-bottom:25px}.hero h1{font:300 clamp(3.5rem,10vw,8.5rem)/.88 'Cormorant Garamond',serif;margin:0;color:#fff0f2;text-shadow:0 0 45px #ed9ab84c}.hero h1 em{font-weight:300;color:var(--rose)}.hero-sub{font:italic clamp(1.2rem,2.5vw,1.7rem) 'Cormorant Garamond',serif;color:#c8d8ee;margin:28px auto 35px;max-width:570px}.signature{font:italic 1.15rem 'Cormorant Garamond',serif;color:var(--gold);margin-top:24px}.pill{display:inline-flex;align-items:center;gap:10px;border:1px solid #f2d36f80;color:#fffdfb;padding:14px 22px;border-radius:99px;text-decoration:none;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;transition:.3s;background:#ffffff08;cursor:pointer}.pill:hover{background:#f2d36f;color:#241426;transform:translateY(-3px);box-shadow:0 10px 30px #f2d36f25}.scrollhint{position:absolute;bottom:28px;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#bca6bd}.scrollhint span{display:block;font-size:1.2rem;margin-top:8px;animation:down 1.4s infinite}@keyframes down{50%{transform:translateY(6px)}}
+section{padding:105px 22px;max-width:1120px;margin:auto}.section-kicker{text-align:center;color:var(--gold);letter-spacing:.25em;text-transform:uppercase;font-size:.65rem}.section-title{text-align:center;font:300 clamp(2.6rem,6vw,4.6rem)/1 'Cormorant Garamond',serif;margin:18px 0 18px}.section-intro{text-align:center;max-width:610px;margin:0 auto 55px;color:#c8d8ee;font:italic 1.25rem 'Cormorant Garamond',serif;line-height:1.5}
+.count-wrap{max-width:740px;margin:auto;padding:38px 24px;border:1px solid #f2d36f45;border-radius:26px;background:linear-gradient(135deg,#ffffff0c,#ffffff03);box-shadow:0 25px 80px #0003;text-align:center}.count-label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0 18px}.timebox{padding:18px 6px;border-right:1px solid #ffffff18}.timebox:last-child{border:0}.number{font:400 clamp(2.6rem,7vw,4.5rem)/1 'Cormorant Garamond',serif;color:var(--pink)}.unit{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#bca6bd;margin-top:8px}.count-note{color:#c8d8ee;font:italic 1.15rem 'Cormorant Garamond',serif}
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.reason{min-height:190px;padding:28px 24px;border:1px solid #ffffff18;border-radius:18px;background:linear-gradient(145deg,#ffffff0c,#ffffff03);transition:.35s;position:relative;overflow:hidden}.reason:hover{transform:translateY(-7px);border-color:#f2d36f80;background:#ffffff12}.reason .num{font:italic 1rem 'Cormorant Garamond',serif;color:var(--gold)}.reason p{font:400 1.55rem/1.2 'Cormorant Garamond',serif;color:#f8e7ee;margin:20px 0 0}.reason:after{content:"✧";position:absolute;right:20px;bottom:12px;color:#f2d36f55;font-size:2rem}
+.letter-area{max-width:760px;margin:auto;text-align:center}.envelope{margin:10px auto 0;width:min(100%,590px);min-height:280px;border:1px solid #f2d36f55;border-radius:8px 8px 22px 22px;background:linear-gradient(145deg,#f0cbd2,#d99cac);color:#10131b;padding:38px 32px;box-shadow:0 25px 70px #0005;position:relative;cursor:pointer;transition:.4s}.envelope:hover{transform:translateY(-5px) rotate(-.4deg)}.envelope .wax{width:54px;height:54px;border-radius:50%;background:#8e3f62;color:#ffe6e7;display:grid;place-items:center;margin:0 auto 18px;font:1.5rem 'Cormorant Garamond',serif;box-shadow:0 4px 12px #61243d55}.envelope h3{font:500 2.3rem 'Cormorant Garamond',serif;margin:8px}.envelope p{font:italic 1rem 'Cormorant Garamond',serif}.letter{display:none;text-align:left;max-width:700px;margin:24px auto 0;padding:36px clamp(22px,5vw,55px);background:#fffdfb;color:#202633;border-radius:5px;box-shadow:0 20px 60px #0005;font:1.28rem/1.65 'Cormorant Garamond',serif;animation:unfold .8s ease}.letter.open{display:block}@keyframes unfold{from{opacity:0;transform:translateY(-15px) scaleY(.8)}to{opacity:1;transform:none}}.letter p{margin:0 0 16px}.letter .sign{font-style:italic;color:#9b496a;text-align:right;margin-top:25px}
+.surprise-box{max-width:720px;margin:auto;text-align:center}.gift{width:150px;height:130px;margin:40px auto 24px;position:relative;cursor:pointer;transition:.35s;filter:drop-shadow(0 15px 20px #0005)}.gift:hover{transform:translateY(-8px) rotate(-3deg)}.gift-base{position:absolute;bottom:0;width:150px;height:94px;background:linear-gradient(110deg,#a13f67,#d56d8f);border-radius:7px}.gift-lid{position:absolute;top:22px;left:-9px;width:168px;height:30px;background:linear-gradient(110deg,#e5a3b5,#b94d75);border-radius:6px;z-index:2}.ribbon-v{position:absolute;left:62px;bottom:0;width:27px;height:108px;background:#f3d6a2;z-index:3}.bow{position:absolute;top:0;left:53px;width:45px;height:28px;border:9px solid #f3d6a2;border-radius:50% 50% 5px 50%;transform:rotate(20deg);z-index:4}.bow:after{content:"";position:absolute;width:45px;height:28px;border:9px solid #f3d6a2;border-radius:50% 50% 50% 5px;left:15px;top:-9px;transform:rotate(-40deg)}.reveal{display:none;max-width:640px;margin:30px auto 0;padding:30px;border:1px solid #f2d36f55;border-radius:20px;background:#ffffff0a;animation:unfold .7s ease}.reveal.show{display:block}.reveal h3{font:italic 2.3rem 'Cormorant Garamond',serif;color:var(--rose);margin:0 0 12px}.reveal p{color:#c8d8ee;line-height:1.7}
+.final{padding-bottom:125px;text-align:center}.final .big{font:300 clamp(3rem,8vw,6.5rem)/.95 'Cormorant Garamond',serif;color:var(--pink);margin:24px 0}.final .big em{color:var(--gold)}.final p{max-width:560px;margin:0 auto 30px;color:#c8d8ee;font:italic 1.3rem/1.5 'Cormorant Garamond',serif}
+footer{text-align:center;padding:26px 20px 38px;border-top:1px solid #ffffff12;color:#9d879f;font-size:.68rem;letter-spacing:.1em}footer span{color:var(--rose)}
+#musicBtn{position:fixed;right:18px;bottom:18px;z-index:10;border:1px solid #f2d36f70;background:#202633;color:#fbe3ed;border-radius:50px;padding:12px 16px;font-size:.7rem;letter-spacing:.08em;box-shadow:0 8px 25px #0005;cursor:pointer}#musicBtn:hover{background:#49304d}.petal{position:fixed;top:-30px;z-index:4;pointer-events:none;color:#f3b9ca;animation:fall linear forwards;text-shadow:0 0 10px #f3b9ca66}@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:0}}
+.love-glow{position:fixed;inset:0;z-index:30;display:grid;place-items:center;pointer-events:none;opacity:0}
+.love-glow.show{animation:love-scene 2.9s ease both}
+.love-glow-card{position:relative;display:grid;place-items:center;gap:9px;padding:26px 38px;border:1px solid #f5bfd5aa;border-radius:28px;background:linear-gradient(145deg,#ffffffed,#eaf5ffed);box-shadow:0 18px 70px #709dc944,0 0 55px #f5bfd566;color:#54708f;transform:scale(.82)}
+.love-glow.show .love-glow-card{animation:love-card 2.9s cubic-bezier(.2,.8,.2,1) both}
+.love-glow-heart{font-size:3.3rem;line-height:1;color:#e88fb4;text-shadow:0 0 18px #f3a9c9;animation:heart-beat 1s ease-in-out infinite}
+.love-glow-words{font:italic 2rem 'Cormorant Garamond',Georgia,serif;letter-spacing:.03em}
+.love-glow-small{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#829bb7}
+@keyframes love-scene{0%{opacity:0}12%,78%{opacity:1}100%{opacity:0}}
+@keyframes love-card{0%{transform:translateY(18px) scale(.82);filter:blur(5px)}18%,72%{transform:translateY(0) scale(1);filter:blur(0)}100%{transform:translateY(-8px) scale(.96);filter:blur(2px)}}
+@keyframes heart-beat{0%,100%{transform:scale(1)}15%{transform:scale(1.16)}30%{transform:scale(1)}45%{transform:scale(1.1)}}
+.hidden{display:none!important}
+@media(max-width:700px){.nav{padding:0 20px;height:62px}.nav .links a{margin-left:12px;font-size:.57rem}.hero{min-height:calc(92svh, 62px);padding-top:65px}.hero h1{font-size:clamp(3.7rem,16vw,6rem)}section{padding:78px 20px}.reasons{grid-template-columns:1fr 1fr;gap:10px}.reason{min-height:160px;padding:20px 17px}.reason p{font-size:1.3rem}.count-wrap{padding:30px 12px}.countdown{gap:0}.timebox{padding:14px 2px}.unit{font-size:.52rem}.envelope{padding:30px 18px}.letter{padding:28px 22px}.scrollhint{bottom:18px}}
+@media(max-width:420px){.reasons{grid-template-columns:1fr}.reason{min-height:125px}.reason p{margin-top:12px}.nav .links a:first-child{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+
+/* Personal touches for Moni Ji */
+.poetry{text-align:center;padding-top:75px;padding-bottom:90px}
+.poem-ornament{color:#f3a9c2;letter-spacing:.3em;font-size:1.25rem;margin:8px 0 24px;text-shadow:0 0 18px #f3a9c255}
+.poem-hindi{font-size:clamp(1.65rem,4.5vw,2.65rem);line-height:1.42;color:#fbe3ed;margin:28px auto;max-width:760px;text-shadow:0 0 30px #ed9ab82b}
+.poem-hindi em{color:#f4b9d0;font-weight:500}
+.poem-english{font-size:clamp(1.35rem,3vw,1.8rem);line-height:1.45;color:#f2d36f;max-width:680px;margin:34px auto 25px;font-style:italic}
+#reasons .section-title{max-width:900px;margin-left:auto;margin-right:auto;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05}
+.reasons{grid-template-columns:repeat(2,1fr);max-width:850px;margin:auto}
+.reason p{font-size:1.42rem;line-height:1.3}
+.grogu{display:block;width:116px;height:78px;margin:13px auto 0;filter:drop-shadow(0 7px 12px #0004)}
+.gift-poem{font-size:clamp(1.45rem,3.7vw,2rem);line-height:1.45;color:#fbe3ed;margin:22px auto;max-width:590px}
+.cringe-note{font-size:.82rem;color:#f2d36f;font-style:italic}
+#petalButton{background:linear-gradient(120deg,#6d3155,#a94e78);border-color:#f5bfd0;color:#fff1f5;box-shadow:0 0 28px #d66c9b26}
+@media(max-width:700px){.poetry{padding:60px 20px}.reasons{grid-template-columns:1fr}.reason{min-height:0}.reason p{font-size:1.35rem}.grogu{width:108px}.poem-english{line-height:1.55}}
+
+#musicBtn{background:linear-gradient(120deg,#6d3155,#a94e78);border-color:#f5bfd0;color:#fff1f5}
+@media(max-width:480px){#musicBtn{right:12px;bottom:12px}}
+
+/* Moni Ji palette: midnight ink, warm gold, pearl white, blush pink and soft blue */
+body{background:radial-gradient(ellipse at 50% 0%,#263448 0%,#10131b 58%,#0b0e14 100%);color:#fffdfb}
+.nav{border-bottom-color:#b9d8f426}
+.brand{color:#f2d36f}
+.hero:before{border-color:#f2d36f45;box-shadow:0 0 100px #b9d8f41b,inset 0 0 80px #f4b9d015}
+.hero:after{border-color:#b9d8f44a}
+.hero h1{color:#fffdfb;text-shadow:0 0 45px #f4b9d04c}
+.hero h1 em{color:#f4b9d0}
+.hero-sub{color:#cfe2f6}
+.eyebrow,.section-kicker,.count-label{color:#f2d36f}
+.signature{color:#f2d36f}
+.pill{border-color:#f2d36f90;color:#fffdfb;background:linear-gradient(110deg,#ffffff0b,#b9d8f40c)}
+.pill:hover{background:#f2d36f;color:#10131b}
+.count-wrap{border-color:#b9d8f45a;background:linear-gradient(135deg,#b9d8f416,#f4b9d00b)}
+.number{color:#fbe3ed}
+.unit{color:#b9d8f4}
+.count-note{color:#c8d8ee}
+.reason{border-color:#b9d8f42d;background:linear-gradient(145deg,#b9d8f414,#f4b9d008)}
+.reason:hover{border-color:#f2d36f;background:#b9d8f41b}
+.reason .num{color:#f2d36f}
+.reason p{color:#fffdfb}
+.poem-hindi{color:#fbe3ed}
+.poem-hindi em{color:#f4b9d0}
+.poem-english{color:#f2d36f}
+.envelope{background:linear-gradient(145deg,#fbe3ed,#b9d8f4);color:#202633;border-color:#f2d36f;box-shadow:0 25px 70px #0007}
+.envelope .wax{background:#202633;color:#fbe3ed}
+.letter{background:#fffdfb;color:#202633}
+.letter .sign{color:#a84e77}
+.reveal{border-color:#f2d36f66;background:linear-gradient(135deg,#b9d8f418,#f4b9d012)}
+.reveal h3{color:#f4b9d0}
+.gift-base{background:linear-gradient(110deg,#b9d8f4,#7d9fc5)}
+.gift-lid{background:linear-gradient(110deg,#f4b9d0,#d982a6)}
+.ribbon-v,.bow,.bow:after{border-color:#f2d36f}
+.final .big{color:#fbe3ed}
+.final .big em{color:#f2d36f}
+.final p{color:#c8d8ee}
+footer{border-top-color:#b9d8f426;color:#b9c6d8}
+footer span{color:#f4b9d0}
+#petalButton{background:linear-gradient(120deg,#b85f85,#789ec5);border-color:#f2d36f;color:#fffdfb}
+#petalButton:hover{background:#f2d36f;color:#10131b}
+.poem-ornament{color:#f4b9d0}
+.gift-poem{color:#fbe3ed}
+.cringe-note{color:#f2d36f}
+.grogu{filter:drop-shadow(0 7px 12px #0006)}
+
+
+/* Reference-inspired palette: ink black, pearl blush, soft rose and glowing pink */
+:root{--night:#130e13;--plum:#261720;--rose:#f4b6c9;--pink:#f9dce5;--gold:#f2c6d2;--cream:#fff8fa;--muted:#e8cbd5;--blue:#e9cbd7;--ink:#35232d}
+body{background:radial-gradient(ellipse at 50% 0%,#432a38 0%,#1c121a 54%,#0d0a0e 100%);color:#fff8fa}
+.stars{opacity:.3}
+.glow{background:#f3a8c4;opacity:.18}.glow.two{background:#d88eaa;opacity:.13}
+.nav{border-bottom-color:#f9dce526}
+.brand,.eyebrow,.section-kicker,.count-label,.signature{color:#f2c6d2}
+.hero:before{border-color:#f4b6c94a;box-shadow:0 0 100px #f3a8c425,inset 0 0 80px #f3a8c518}
+.hero:after{border-color:#fff0f644}
+.hero h1{color:#fff8fa;text-shadow:0 0 45px #f3a8c45c}
+.hero h1 em,.reveal h3{color:#f4b6c9}
+.hero-sub,.count-note,.final p{color:#f0dbe3}
+.pill{border-color:#f2c6d288;color:#fff8fa;background:linear-gradient(110deg,#ffffff0b,#f3a8c415)}
+.pill:hover{background:#f2c6d2;color:#35232d}
+.count-wrap{position:relative;overflow:visible;border:1px solid #f4b6c9;background:linear-gradient(145deg,#fff0f5 0%,#f5dce5 56%,#eecbd8 100%);color:#35232d;box-shadow:0 18px 65px #f3a8c426,inset 0 1px #fff}
+.count-wrap .count-label{color:#9d526f}
+.count-wrap .number{color:#6f354f;text-shadow:0 2px #fff8}
+.count-wrap .unit{color:#98647a}
+.count-wrap .count-note{color:#81536a}
+.timebox{border-right-color:#bd829b45}
+.reason{border-color:#f4b6c94a;background:linear-gradient(145deg,#3a2632,#241720)}
+.reason:hover{border-color:#f2c6d2;background:#49303e}
+.reason .num,.poem-english,.cringe-note{color:#f2c6d2}
+.reason p{color:#fff8fa}
+.poem-hindi,.gift-poem{color:#ffeaf1}
+.poem-hindi em{color:#f4b6c9}
+.envelope{background:linear-gradient(145deg,#fff0f5,#e9b6c9);color:#35232d;border-color:#f2c6d2;box-shadow:0 25px 70px #0007}
+.envelope .wax{background:#873b60;color:#fff0f5}
+.letter{background:#fff8fa;color:#432a39}
+.letter .sign{color:#a84e77}
+.reveal{border-color:#f2c6d288;background:linear-gradient(135deg,#382431,#241720)}
+.gift-base{background:linear-gradient(110deg,#a64d75,#e78bad)}
+.gift-lid{background:linear-gradient(110deg,#f7c3d5,#c65d88)}
+.ribbon-v,.bow,.bow:after{border-color:#f8d8e4}
+.final .big{color:#ffeaf1}.final .big em{color:#f2c6d2}
+footer{border-top-color:#f9dce526;color:#d8b9c9}footer span{color:#f4b6c9}
+#petalButton{background:linear-gradient(120deg,#9e426c,#d879a0);border-color:#f2c6d2;color:#fff8fa;box-shadow:0 0 28px #d66c9b35}
+#petalButton:hover{background:#f2c6d2;color:#35232d}
+.poem-ornament{color:#f4b6c9}
+.grogu{filter:drop-shadow(0 7px 12px #0006)}
+
+.timer-butterfly{
+ appearance:none;-webkit-appearance:none;border:0;padding:0;margin:0;background:transparent;
+ display:block;line-height:0;color:inherit;
+
+ position:fixed;z-index:50;right:clamp(8px,2.2vw,28px);top:43vh;
+ width:clamp(76px,9vw,112px);height:auto;cursor:pointer;
+ filter:drop-shadow(0 8px 16px #d878a088);
+ animation:butterfly-side-flight 7.5s ease-in-out infinite;
+ transform-origin:50% 55%;-webkit-tap-highlight-color:transparent;
+ touch-action:manipulation;user-select:none;
+}
+.timer-butterfly svg{width:100%;height:auto;overflow:visible;display:block}
+.timer-butterfly .wing{transform-box:fill-box;transform-style:preserve-3d;will-change:transform}
+.timer-butterfly .wing-left{transform-origin:100% 55%;animation:wing-flap-left .34s ease-in-out infinite alternate}
+.timer-butterfly .wing-right{transform-origin:0% 55%;animation:wing-flap-right .34s ease-in-out infinite alternate}
+.timer-butterfly .butterfly-sparkles{animation:sparkle-twinkle 2.4s ease-in-out infinite}
+.timer-butterfly:focus-visible{outline:2px solid #ffd9e7;outline-offset:5px;border-radius:50%}
+.butterfly-love{
+ position:absolute;left:50%;top:-12px;transform:translate(-50%,8px) scale(.75);
+ opacity:0;white-space:nowrap;pointer-events:none;
+ padding:7px 13px;border:1px solid #ffe4ee;border-radius:999px;
+ background:linear-gradient(135deg,#fff8fb,#f8d5e3);color:#8e4265;
+ font:600 12px/1.2 Georgia,serif;letter-spacing:.04em;
+ box-shadow:0 5px 18px #b85c8235;transition:opacity .25s,transform .25s;
+}
+.timer-butterfly.love-visible .butterfly-love{opacity:1;transform:translate(-50%,-5px) scale(1)}
+@keyframes wing-flap-left{from{transform:scaleX(1) rotate(-5deg)}to{transform:scaleX(.28) rotate(9deg)}}
+@keyframes wing-flap-right{from{transform:scaleX(1) rotate(5deg)}to{transform:scaleX(.28) rotate(-9deg)}}
+@keyframes butterfly-side-flight{
+ 0%,100%{translate:0 0;rotate:-4deg}
+ 20%{translate:-9px -18px;rotate:5deg}
+ 42%{translate:-17px -5px;rotate:-3deg}
+ 64%{translate:-7px 16px;rotate:6deg}
+ 82%{translate:4px 7px;rotate:-2deg}
+}
+@keyframes sparkle-twinkle{0%,100%{opacity:.55}50%{opacity:1}}
+@media(max-width:700px){
+ .timer-butterfly{width:66px;right:5px;top:38vh}
+ .butterfly-love{font-size:11px;padding:6px 10px}
+}
+@media(prefers-reduced-motion:reduce){
+ .timer-butterfly,.timer-butterfly .wing,.timer-butterfly .butterfly-sparkles{animation:none}
+}
+/* Butterfly becomes interactive: tap to guide it, drag to make it follow */
+.timer-butterfly.is-guided{width:116px;height:98px;
+ position:fixed;
+ top:0;left:0;right:auto;bottom:auto;
+ z-index:30;
+ margin:0;
+ pointer-events:none;
+ animation:none;
+ translate:0 0;
+ rotate:0deg;
+ transform:translate(-50%,-50%);
+ transition:left .12s cubic-bezier(.2,.8,.2,1),top .12s cubic-bezier(.2,.8,.2,1),transform .25s ease;
+}
+.timer-butterfly.is-guided.fluttering{transform:translate(-50%,-50%) rotate(-8deg) scale(1.1)}
+@media(prefers-reduced-motion:reduce){.timer-butterfly.is-guided{width:116px;height:98px;transition:none}}
+
+
+/* A tiny whispered message whenever the butterfly is guided */
+.timer-butterfly{pointer-events:auto;cursor:pointer;touch-action:none}
+.timer-butterfly.is-guided{pointer-events:auto}
+.butterfly-love{
+ position:absolute;left:50%;top:-23px;white-space:nowrap;
+ padding:7px 13px;border:1px solid #f4b6c9;border-radius:999px;
+ background:rgba(255,241,247,.96);color:#9d426b;
+ font:600 12px/1.1 'DM Sans',sans-serif;letter-spacing:.04em;
+ box-shadow:0 5px 18px #d878a055;opacity:0;
+ transform:translate(-50%,8px) scale(.85);pointer-events:none;
+ transition:opacity .22s ease,transform .22s ease;
+}
+.timer-butterfly.love-visible .butterfly-love{
+ opacity:1;transform:translate(-50%,0) scale(1);
+}
+
+
+/* New fairytale interactions */
+.magic-section{max-width:920px;text-align:center}
+.star-sky{position:relative;max-width:560px;height:350px;margin:0 auto 18px;border:1px solid #f4b6c944;border-radius:28px;overflow:hidden;background:radial-gradient(ellipse at center,#62364f88,#1d121c 72%);box-shadow:inset 0 0 60px #f3a8c41c,0 15px 45px #0004}
+.heart-lines{position:absolute;width:74%;height:82%;left:13%;top:7%;overflow:visible}
+.heart-lines path{fill:none;stroke:#f7bfd4;stroke-width:1.3;stroke-dasharray:4 7;opacity:.7;filter:drop-shadow(0 0 5px #f3a8c4)}
+.secret-star{position:absolute;border:0;background:transparent;color:#ffe8f0;font-size:2rem;cursor:pointer;text-shadow:0 0 14px #ffb7d1;transition:transform .25s,color .25s;z-index:2;touch-action:manipulation}
+.secret-star:hover,.secret-star.found{transform:scale(1.5);color:#f5c7d7}
+.s1{left:18%;top:23%}.s2{left:38%;top:10%}.s3{left:62%;top:10%}.s4{right:17%;top:24%}.s5{left:31%;top:53%}.s6{right:29%;top:54%}
+.star-message{position:absolute;left:8%;right:8%;bottom:48px;min-height:45px;display:grid;place-items:center;color:#ffe8f0;font:italic 1.25rem 'Cormorant Garamond',serif;padding:6px}
+.star-progress{position:absolute;bottom:16px;left:0;right:0;color:#f2c6d2;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase}
+.constellation-finale{display:none;color:#f5c7d7;font:italic 1.5rem 'Cormorant Garamond',serif;margin-top:15px}.constellation-finale.show{display:block;animation:unfold .7s ease}
+.cake-stage{padding:22px 0 8px}.cake{position:relative;width:230px;height:190px;margin:0 auto;filter:drop-shadow(0 12px 18px #0005)}
+.cake-bottom{position:absolute;bottom:20px;left:15px;width:200px;height:75px;border-radius:12px 12px 20px 20px;background:linear-gradient(90deg,#d77f9f,#f8c8d8 50%,#ce7395);border:2px solid #ffe6ee}
+.cake-middle{position:absolute;bottom:85px;left:29px;width:172px;height:48px;border-radius:12px 12px 8px 8px;background:linear-gradient(90deg,#ffeaf1,#f6b9cf 50%,#ffeaf1);border:2px solid #fff0f5}
+.cake-top{position:absolute;bottom:124px;left:29px;width:172px;height:20px;border-radius:50%;background:#fff0f5;border:2px solid #f7c5d7;z-index:2}
+.cake-plate{position:absolute;bottom:8px;left:0;width:230px;height:22px;border-radius:50%;background:linear-gradient(#fff4f8,#dba7bd);border:1px solid #fff}
+.candles{position:absolute;z-index:4;bottom:140px;left:69px;display:flex;gap:29px}.candles span{height:38px;width:9px;border-radius:4px;background:repeating-linear-gradient(135deg,#fff 0 5px,#e98eb0 5px 9px);box-shadow:0 0 5px #fff8}
+.flames{position:absolute;z-index:5;bottom:176px;left:69px;display:flex;gap:29px}.flames i{display:block;width:10px;height:17px;border-radius:80% 15% 70% 50%;background:radial-gradient(ellipse at 50% 70%,#fff8b7 0 20%,#ffc36e 45%,#f08b80 75%);transform:rotate(8deg);filter:drop-shadow(0 0 8px #ffbd70);animation:candle-flicker .55s ease-in-out infinite alternate}
+@keyframes candle-flicker{to{transform:rotate(-8deg) scale(.85);opacity:.8}}
+.flames.out{display:none}.cake-message{min-height:35px;margin:18px auto 0;color:#f5c7d7;font:italic 1.3rem 'Cormorant Garamond',serif}
+.last-secret-wrap{margin:26px auto 0;max-width:560px}.last-secret-button{border:1px solid #f2c6d2;border-radius:99px;padding:12px 20px;color:#ffeaf1;background:#ffffff0a;cursor:pointer}
+.last-secret{display:none;margin-top:18px;padding:25px;border:1px solid #f4b6c955;border-radius:18px;background:#3b2533;color:#ffeaf1;font:italic 1.45rem/1.45 'Cormorant Garamond',serif}
+.last-secret.show{display:block;animation:unfold .7s ease}.last-secret small{display:block;margin-top:15px;color:#f2c6d2;font-size:1rem}
+.love-spark{position:fixed;z-index:29;pointer-events:none;color:#ffc4d9;text-shadow:0 0 10px #ff9fc4;animation:spark-fade .8s ease-out forwards}
+@keyframes spark-fade{to{transform:translateY(-22px) scale(.2) rotate(50deg);opacity:0}}
+@media(max-width:600px){.star-sky{height:310px}.cake{transform:scale(.9);transform-origin:top center;height:175px}.secret-star{font-size:1.8rem}}
+
+
+/* A handwritten-style signature that gently writes itself at the end */
+.final-signature{
+ display:inline-block;
+ margin:30px auto 0;
+ padding:0 8px 5px;
+ font-family:"Segoe Script","Bradley Hand","Apple Chancery",cursive;
+ font-size:clamp(1.45rem,4vw,2rem);
+ font-weight:500;
+ letter-spacing:.015em;
+ color:#f4b6c9;
+ clip-path:inset(0 100% 0 0);
+ animation:signature-write 2.4s cubic-bezier(.22,.75,.25,1) .65s forwards,
+           signature-glow 3.5s ease-in-out 3.1s infinite;
+}
+.final-signature span{
+ display:inline-block;
+ color:#ffd9e7;
+ margin-left:4px;
+ animation:signature-heart 1.5s ease-in-out 2.8s infinite;
+}
+@keyframes signature-write{
+ to{clip-path:inset(0 0 0 0)}
+}
+@keyframes signature-glow{
+ 0%,100%{text-shadow:0 0 0 #f4b6c900}
+ 50%{text-shadow:0 0 16px #f4b6c977}
+}
+@keyframes signature-heart{
+ 0%,100%{transform:scale(1) rotate(0)}
+ 50%{transform:scale(1.2) rotate(-8deg)}
+}
+@media(prefers-reduced-motion:reduce){
+ .final-signature{clip-path:none;animation:none}
+ .final-signature span{animation:none}
+}
+
+
+/* Baby blush pink palette refresh */
+:root{
+ --night:#fff0f4;--plum:#f8dce5;--rose:#c86f91;--pink:#a94f73;
+ --gold:#bd6686;--cream:#704b5a;--muted:#876575;--blue:#8e6378;--ink:#704b5a;
+}
+body{background:#fff0f4;color:#704b5a}
+.stars,.stars:before,.stars:after{
+ background-image:
+ radial-gradient(1px 1px at 12% 18%,#fff 98%,transparent),
+ radial-gradient(1px 1px at 72% 32%,#d98ba8 98%,transparent),
+ radial-gradient(1px 1px at 44% 76%,#fff 98%,transparent),
+ radial-gradient(2px 2px at 88% 82%,#e7a8bd 98%,transparent),
+ radial-gradient(1px 1px at 28% 54%,#fff 98%,transparent);
+ opacity:.55
+}
+.glow{background:#f3a9c1;opacity:.25}
+.glow.two{background:#e8b6ca;opacity:.3}
+.nav{color:#895d70;border-bottom-color:#d98ba833}
+.brand{color:#b65d80}
+.nav a{color:#895d70}
+.hero:before{border-color:#d98ba844;box-shadow:0 0 100px #e9a8bf35,inset 0 0 80px #e9a8bf20}
+.hero:after{border-color:#d98ba833}
+.eyebrow,.section-kicker,.count-label{color:#b65d80}
+.hero h1{color:#754b5d;text-shadow:0 0 35px #e9a8bf55}
+.hero h1 em{color:#c66d91}
+.hero-sub,.section-intro,.count-note,.final p,.reveal p{color:#8a6474}
+.signature{color:#b65d80}
+.pill{border-color:#d68aa6;color:#8a526b;background:#fff9fb;box-shadow:0 5px 18px #d68aa622}
+.pill:hover{background:#d98ba8;color:#fff;box-shadow:0 10px 30px #d68aa644}
+.scrollhint{color:#9d7183}
+.count-wrap{border-color:#e5b2c5;background:linear-gradient(135deg,#fffafd,#fbe4ec);box-shadow:0 20px 65px #b76d8a1c}
+.timebox{border-right-color:#e8c6d2}
+.number{color:#b65d80}
+.unit{color:#9d7183}
+.reason{border-color:#e8c6d2;background:linear-gradient(145deg,#fffafd,#fceaf0);box-shadow:0 8px 28px #bd78921a}
+.reason:hover{border-color:#d68aa6;background:#fff}
+.reason .num{color:#b65d80}
+.reason p{color:#795264}
+.reason:after{color:#d68aa655}
+.envelope{border-color:#e7b2c4;background:linear-gradient(145deg,#f9dce6,#efbccc);color:#704b5a;box-shadow:0 20px 55px #bd789233}
+.envelope .wax{background:#b65d80;color:#fff5f8}
+.letter{background:#fffafd;color:#704b5a;box-shadow:0 18px 50px #bd789233}
+.letter .sign{color:#b65d80}
+.gift-base{background:linear-gradient(110deg,#c86f91,#e6a6bd)}
+.gift-lid{background:linear-gradient(110deg,#f1c3d2,#c86f91)}
+.ribbon-v,.bow,.bow:after{border-color:#fff0f4}
+.reveal{border-color:#e5b2c5;background:linear-gradient(135deg,#fffafd,#fbe4ec)}
+.reveal h3{color:#b65d80}
+.final .big{color:#b65d80}
+.final .big em{color:#d58aa5}
+footer{border-top-color:#e6bfd0;color:#9b7182}
+footer span{color:#c86f91}
+#petalButton{background:linear-gradient(120deg,#c86f91,#e6a6bd);border-color:#e9b7c9;color:#fff}
+#petalButton:hover{background:#b65d80;color:#fff}
+.poem-ornament{color:#c86f91}
+.grogu{filter:drop-shadow(0 7px 12px #9b5c7730)}
+.timer-butterfly{filter:drop-shadow(0 8px 16px #d878a066)}
+.butterfly-love{background:linear-gradient(135deg,#fffafd,#f9dce6);color:#98506d;border-color:#e9b7c9}
+#musicBtn{border-color:#e5b2c5;background:#fff9fb;color:#8a526b;box-shadow:0 8px 25px #bd789233}
+#musicBtn:hover{background:#f4d5e0}
+.petal{text-shadow:0 0 10px #d878a066}
+.final-signature{color:#b65d80}
+.final-signature span{color:#d77f9f}
+.star-sky{border-color:#e6b7c9;background:radial-gradient(ellipse at center,#f8dce688,#fff0f4 72%);box-shadow:inset 0 0 60px #e9a8bf25,0 15px 45px #bd78921a}
+.heart-lines path{stroke:#c86f91}
+
+
+/* Contrast pass: keep the baby-blush palette while making every text layer readable */
+body{color:#684354}
+.hero h1{color:#684354;text-shadow:0 2px 18px #ffffffaa}
+.hero-sub,.section-intro,.count-note,.final p,.reveal p{color:#795466}
+.section-title{color:#684354}
+.poem-hindi,.gift-poem{color:#74495d;text-shadow:none}
+.poem-hindi em{color:#b45478}
+.poem-english{color:#96506d}
+.cringe-note{color:#98506d}
+.count-label,.section-kicker,.eyebrow{color:#98506d}
+.number{color:#a84f73}
+.unit,.scrollhint{color:#805a6b}
+.reason p{color:#684354}
+.reason .num{color:#98506d}
+.reason:after{color:#c77c98}
+.envelope{color:#684354}
+.envelope h3,.envelope p{color:#684354}
+.envelope .wax{color:#fff8fb}
+.letter{background:#fffafd;color:#684354;border:1px solid #e8bfd0}
+.letter p,.letter div{color:#684354}
+.letter .sign{color:#a34f72}
+.reveal{background:#fffafd;border-color:#e5b2c5}
+.reveal h3{color:#a34f72}
+.reveal p{color:#684354}
+.final .big{color:#a34f72}
+.final .big em{color:#c27691}
+.final-signature{color:#a34f72}
+.final-signature span{color:#c27691}
+footer{color:#805a6b}
+footer span{color:#b65d80}
+.star-sky{background:radial-gradient(ellipse at center,#f8dce6 0%,#fbeaf0 72%);border-color:#dfafc2}
+.heart-lines path{stroke:#b65d80;opacity:.8}
+.secret-star{color:#a34f72;text-shadow:0 0 8px #e6a6bd}
+.secret-star:hover,.secret-star.found{color:#c27691}
+.star-message{color:#684354;text-shadow:0 1px 4px #fff}
+.star-progress{color:#80536a}
+.constellation-finale{color:#98506d}
+.cake-stage,.cake-wish,.cake-message{color:#684354}
+.butterfly-love{color:#82445f}
+.pill{color:#805066}
+#petalButton{color:#fff}
+#musicBtn{color:#805066}
+::selection{background:#e8b3c7;color:#543143}
+
+
+
+/* Baby-blue fairytale palette: soft sky, powder blue, pearl and deep slate */
+:root{
+ --night:#f1f7ff;--plum:#dceaff;--rose:#8bb8e8;--pink:#dcecff;
+ --gold:#739dcc;--cream:#fff;--muted:#6685a8;--blue:#b9d8f4;--ink:#263d59
+}
+body{
+ background:radial-gradient(ellipse at 50% 0%,#ffffff 0%,#edf5ff 58%,#e3efff 100%);
+ color:#304965
+}
+.stars{opacity:.35}
+.glow{background:#a9cef5;opacity:.28}
+.glow.two{background:#c4dcf8;opacity:.3}
+.nav{color:#617f9f;border-bottom-color:#a9c9ed66}
+.brand{color:#527eae}
+.nav a{color:#617f9f}
+.hero:before{border-color:#9fc3eb88;box-shadow:0 0 100px #a9cef544,inset 0 0 80px #b9d8f433}
+.hero:after{border-color:#b4d0f077}
+.eyebrow,.section-kicker,.count-label,.signature{color:#527eae}
+.hero h1{color:#294561;text-shadow:0 2px 18px #ffffffcc}
+.hero h1 em{color:#6f9fce}
+.hero-sub,.section-intro,.count-note,.final p,.reveal p{color:#607d9d}
+.section-title{color:#294561}
+.pill{border-color:#91b8e2;color:#456b94;background:#ffffffd9;box-shadow:0 5px 18px #8bb8e833}
+.pill:hover{background:#83addb;color:#fff;box-shadow:0 10px 30px #83addb55}
+.scrollhint{color:#6f8ba9}
+.count-wrap{border-color:#b7d1ed;background:linear-gradient(135deg,#fff 0%,#eaf4ff 58%,#dcecff 100%);box-shadow:0 20px 65px #739dcc22}
+.timebox{border-right-color:#c6d9ee}
+.number{color:#4779ad}
+.unit{color:#6f8ba9}
+.reason{border-color:#c6d9ee;background:linear-gradient(145deg,#fff,#edf5ff);box-shadow:0 8px 28px #739dcc1c}
+.reason:hover{border-color:#8bb8e8;background:#fff}
+.reason .num{color:#527eae}
+.reason p{color:#304965}
+.reason:after{color:#8bb8e866}
+.poem-hindi,.gift-poem{color:#385b7f;text-shadow:none}
+.poem-hindi em{color:#5c91c5}
+.poem-english,.cringe-note{color:#527eae}
+.poem-ornament{color:#6f9fce}
+.envelope{border-color:#a9c9ed;background:linear-gradient(145deg,#eaf4ff,#cfe3fa);color:#304965;box-shadow:0 20px 55px #739dcc33}
+.envelope .wax{background:#527eae;color:#fff}
+.letter{background:#fff;color:#304965;box-shadow:0 18px 50px #739dcc22;border:1px solid #d0e1f3}
+.letter p,.letter div{color:#304965}
+.letter .sign{color:#527eae}
+.gift-base{background:linear-gradient(110deg,#6e9fce,#a9ccef)}
+.gift-lid{background:linear-gradient(110deg,#c6e0fb,#78a9d9)}
+.ribbon-v,.bow,.bow:after{border-color:#fff3cf}
+.reveal{border-color:#b7d1ed;background:linear-gradient(135deg,#fff,#eaf4ff)}
+.reveal h3{color:#527eae}
+.reveal p{color:#304965}
+.final .big{color:#4779ad}
+.final .big em{color:#739dcc}
+footer{border-top-color:#c6d9ee;color:#6f8ba9}
+footer span{color:#527eae}
+#petalButton,#musicBtn{background:linear-gradient(120deg,#6e9fce,#9fc5ed);border-color:#b7d1ed;color:#fff;box-shadow:0 8px 25px #739dcc33}
+#petalButton:hover,#musicBtn:hover{background:#527eae;color:#fff}
+.petal{color:#9fc5ed;text-shadow:0 0 10px #83addb66}
+.grogu{filter:drop-shadow(0 7px 12px #739dcc30)}
+.timer-butterfly{filter:drop-shadow(0 8px 16px #83addb88)}
+.butterfly-love{background:linear-gradient(135deg,#fff,#e4f1ff);color:#456b94;border-color:#a9c9ed;box-shadow:0 5px 18px #739dcc35}
+.star-sky{border-color:#b7d1ed;background:radial-gradient(ellipse at center,#dcecff 0%,#f4f9ff 72%);box-shadow:inset 0 0 60px #a9cef533,0 15px 45px #739dcc22}
+.heart-lines path{stroke:#6e9fce;opacity:.85;filter:drop-shadow(0 0 5px #a9cef5)}
+.secret-star{color:#527eae;text-shadow:0 0 8px #b9d8f4}
+.secret-star:hover,.secret-star.found{color:#739dcc}
+.star-message{color:#304965;text-shadow:0 1px 4px #fff}
+.star-progress,.constellation-finale{color:#527eae}
+.last-secret{background:#eaf4ff;border-color:#b7d1ed;color:#304965}
+.last-secret small{color:#527eae}
+.cake-bottom{background:linear-gradient(90deg,#8bb8e8,#d5e9ff 50%,#78a9d9);border-color:#fff}
+.cake-middle{background:linear-gradient(90deg,#fff,#cfe3fa 50%,#fff);border-color:#fff}
+.cake-top{background:#fff;border-color:#b9d8f4}
+.cake-plate{background:linear-gradient(#fff,#c9def4);border-color:#fff}
+.candles span{background:repeating-linear-gradient(135deg,#fff 0 5px,#8bb8e8 5px 9px)}
+.cake-stage,.cake-wish,.cake-message{color:#304965}
+.final-signature{color:#527eae}
+.final-signature span{color:#739dcc}
+::selection{background:#cfe3fa;color:#294561}
+@media(prefers-reduced-motion:reduce){.timer-butterfly,.timer-butterfly .wing,.timer-butterfly .butterfly-sparkles{animation:none}}
+
+
+
+/* Gift-opening animation: lid lifts, bow bounces, and the message unfolds */
+.gift{perspective:700px;transform-style:preserve-3d}
+.gift-base{z-index:1;transition:filter .5s ease,transform .5s ease}
+.gift-lid{
+ transform-origin:12% 100%;
+ transform-style:preserve-3d;
+ transition:transform .85s cubic-bezier(.2,.8,.2,1),filter .6s ease;
+ backface-visibility:visible;
+}
+.gift .bow{transform-origin:50% 90%;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .45s ease}
+.gift .ribbon-v{transition:opacity .35s ease,transform .5s ease}
+.gift.opening .gift-lid,.gift.open .gift-lid{
+ transform:translate(-17px,-48px) rotate(-32deg);
+ filter:drop-shadow(0 8px 7px #527eae33);
+}
+.gift.opening .bow,.gift.open .bow{
+ transform:translate(-24px,-62px) rotate(-42deg) scale(1.08);
+}
+.gift.opening .ribbon-v,.gift.open .ribbon-v{
+ opacity:0;transform:translateY(12px) scaleY(.4);
+}
+.gift.opening .gift-base,.gift.open .gift-base{
+ filter:drop-shadow(0 0 18px #9fc5edaa);
+}
+.gift.opening{animation:gift-pop .7s ease}
+@keyframes gift-pop{
+ 0%{transform:translateY(0) scale(1)}
+ 35%{transform:translateY(-12px) scale(1.06)}
+ 65%{transform:translateY(2px) scale(.98)}
+ 100%{transform:translateY(0) scale(1)}
+}
+.gift.opening:after,.gift.open:after{
+ content:"✦  ✧  ♡  ✧  ✦";
+ position:absolute;left:50%;top:-35px;transform:translateX(-50%);
+ width:230px;color:#6e9fce;font-size:1.15rem;letter-spacing:.45em;
+ text-shadow:0 0 14px #b9d8f4;pointer-events:none;
+ animation:gift-sparkle 1.2s ease-out both;
+}
+@keyframes gift-sparkle{
+ 0%{opacity:0;transform:translate(-50%,18px) scale(.55)}
+ 35%{opacity:1}
+ 100%{opacity:0;transform:translate(-50%,-48px) scale(1.2)}
+}
+.gift.open{cursor:pointer}
+.reveal{transform-origin:top center}
+.reveal.show{animation:gift-message-unfold .85s cubic-bezier(.2,.75,.25,1) both}
+@keyframes gift-message-unfold{
+ 0%{opacity:0;transform:translateY(-20px) scaleY(.72) scale(.96)}
+ 65%{opacity:1;transform:translateY(4px) scaleY(1.02) scale(1)}
+ 100%{opacity:1;transform:translateY(0) scaleY(1) scale(1)}
+}
+@media(prefers-reduced-motion:reduce){
+ .gift,.gift-lid,.gift .bow,.gift .ribbon-v,.gift-base,.reveal.show{animation:none!important;transition:none!important}
+}
+
+
+/* Post-midnight birthday celebration preview */
+.birthday-after-midnight{position:relative;isolation:isolate;overflow:hidden}
+.birthday-reveal-card{position:relative;max-width:760px;margin:34px auto 0;padding:clamp(30px,6vw,58px) clamp(22px,6vw,68px);text-align:center;border:1px solid #b7d1ed;border-radius:34px;background:linear-gradient(145deg,#ffffff 0%,#eff7ff 48%,#dcecff 100%);box-shadow:0 24px 85px #739dcc2b,inset 0 1px #fff;overflow:hidden}
+.birthday-reveal-card:before,.birthday-reveal-card:after{content:"";position:absolute;width:250px;height:250px;border-radius:50%;filter:blur(45px);pointer-events:none;z-index:-1}
+.birthday-reveal-card:before{background:#f8d8e8;opacity:.72;top:-140px;left:-100px}
+.birthday-reveal-card:after{background:#c5e0fb;opacity:.9;right:-100px;bottom:-150px}
+.birthday-topline{font-size:.66rem;letter-spacing:.25em;color:#6c91b8;font-weight:600}
+.birthday-cake{font-size:clamp(3.2rem,8vw,5rem);margin:22px auto 10px;filter:drop-shadow(0 8px 12px #789fc833);animation:cake-arrive 1s cubic-bezier(.2,.8,.2,1) both}
+.birthday-headline{font-size:clamp(3.3rem,8vw,6rem);line-height:.9;font-weight:400;color:#315779;margin:12px 0 22px}
+.birthday-headline em{font-weight:400;color:#79a9d7}
+.birthday-message{max-width:540px;margin:0 auto;color:#5f7f9f;font:italic 1.22rem/1.65 'Cormorant Garamond',serif}
+.birthday-divider{margin:25px 0 14px;color:#d58eae;letter-spacing:.18em}
+.birthday-signoff{font-size:1.8rem;color:#456d94;margin:0 0 18px}
+.birthday-from{font-size:.62rem;letter-spacing:.25em;color:#83a5c8;margin-bottom:28px}
+.birthday-cta{background:linear-gradient(120deg,#fff,#e7f2ff);color:#527eae;border-color:#a9c9ed;box-shadow:0 8px 24px #86add533}
+.birthday-cta:hover{background:#83addb;color:white}
+.birthday-orbit{position:absolute;inset:0;pointer-events:none;color:#8bb8e8}
+.birthday-orbit span{position:absolute;animation:orbit-twinkle 2.4s ease-in-out infinite alternate}
+.birthday-orbit span:nth-child(1){top:13%;left:12%;font-size:1.5rem}
+.birthday-orbit span:nth-child(2){top:22%;right:12%;font-size:1.7rem;color:#e7a8c2}
+.birthday-orbit span:nth-child(3){bottom:20%;left:9%;font-size:1.3rem;animation-delay:.6s}
+.birthday-orbit span:nth-child(4){bottom:15%;right:10%;font-size:1.5rem;animation-delay:1s}
+.preview-confetti{position:absolute;inset:0;z-index:-1;pointer-events:none;color:#8bb8e8}
+.preview-confetti i{position:absolute;top:-10%;font-style:normal;opacity:.6;animation:confetti-fall 8s linear infinite}
+.preview-confetti i:nth-child(1){left:7%;animation-delay:-1s}.preview-confetti i:nth-child(2){left:18%;animation-delay:-5s;color:#e5a8c4}.preview-confetti i:nth-child(3){left:31%;animation-delay:-3s}.preview-confetti i:nth-child(4){left:46%;animation-delay:-7s;color:#e5a8c4}.preview-confetti i:nth-child(5){left:58%;animation-delay:-2s}.preview-confetti i:nth-child(6){left:69%;animation-delay:-6s;color:#e5a8c4}.preview-confetti i:nth-child(7){left:79%;animation-delay:-4s}.preview-confetti i:nth-child(8){left:89%;animation-delay:-1.5s;color:#e5a8c4}.preview-confetti i:nth-child(9){left:96%;animation-delay:-5.5s}.preview-confetti i:nth-child(10){left:39%;animation-delay:-4.5s}
+.preview-caption{text-align:center;margin:24px 0 0;color:#86a5c6;font-size:.58rem;letter-spacing:.2em}
+@keyframes confetti-fall{0%{transform:translateY(-20px) rotate(0);opacity:0}15%{opacity:.7}100%{transform:translateY(105vh) rotate(300deg);opacity:0}}
+@keyframes orbit-twinkle{from{opacity:.35;transform:scale(.8) rotate(-10deg)}to{opacity:1;transform:scale(1.2) rotate(12deg)}}
+@keyframes cake-arrive{from{opacity:0;transform:translateY(18px) scale(.75)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:520px){.birthday-reveal-card{border-radius:26px;padding:34px 22px}.birthday-message{font-size:1.13rem}.birthday-orbit span:nth-child(1){left:6%}.birthday-orbit span:nth-child(2){right:6%}}
+
+</style>
+</head>
+<body>
+<div class="stars"></div><div class="glow"></div><div class="glow two"></div>
+<header class="nav"><div class="brand">a little fairytale <span>✧</span></div><div class="links"><a href="#countdown">The day</a><a href="#letter">A letter</a><a href="#surprise">Surprise</a></div></header>
+<main>
+<section class="hero" id="home">
+ <div class="hero-inner">
+  <div class="eyebrow">A story written in the stars · 22.11.2026</div>
+  <h1>For you,<br><em>Moni Ji.</em></h1>
+  <p class="hero-sub">Some people make the world feel softer just by being in it. You're that person.</p>
+  <a class="pill" href="#countdown">A little world, made just for you <span>♡</span></a>
+  <div class="signature">Every little detail is here to celebrate you · Aryan</div>
+ </div>
+ <div class="scrollhint">A little magic awaits <span>⌄</span></div>
+</section>
+<section class="poetry" aria-label="A little poem for Moni Ji">
+ <div class="poem-ornament">✧ &nbsp; ♡ &nbsp; ✧</div>
+ <div class="section-kicker">A thought that always finds its way to you</div>
+ <blockquote class="poem-hindi serif">
+  Itni achhi kyun lagne lagi ho…<br>
+  Itna achha koi kaise ho sakta hai?<br>
+  Tum chaand jaisi toh bilkul nahi —<br>
+  <em>Haan, chaand tumhare jaisa ho sakta hai.</em>
+ </blockquote>
+ <p class="poem-english serif">I don't know how often I cross your mind, but I hope whenever I do, you feel even a fraction of the happiness I feel whenever you cross mine.</p>
+ <div class="poem-ornament">♡</div>
+</section>
+<section id="countdown" class="birthday-after-midnight">
+ <div class="section-kicker">✧ midnight magic ✧</div>
+ <h2 class="section-title">The wait is over, birthday girl.</h2>
+ <p class="section-intro">The stars have been waiting for this moment, Moni Ji. ♡</p>
+ <div class="birthday-reveal-card">
+  <div class="birthday-orbit" aria-hidden="true"><span>✦</span><span>♡</span><span>✧</span><span>✦</span></div>
+  <div class="birthday-topline">TODAY IS ALL ABOUT YOU</div>
+  <div class="birthday-cake" aria-hidden="true">🎂</div>
+  <h3 class="birthday-headline serif">It's your day,<br><em>Moni Ji!</em></h3>
+  <p class="birthday-message">A little more sparkle in the sky, a little more happiness in the world — because today, you were born. I hope this year brings you the kind of joy you give to everyone around you.</p>
+  <div class="birthday-divider">♡　✧　♡</div>
+  <p class="birthday-signoff serif">Happy Birthday, my favourite person.</p>
+  <div class="birthday-from">WITH LOVE, ARYAN</div>
+  <a class="pill birthday-cta" href="#surprise">Your birthday surprise awaits <span>♡</span></a>
+ </div>
+ <div class="preview-confetti" aria-hidden="true">
+  <i>✦</i><i>♡</i><i>✧</i><i>✦</i><i>♡</i><i>✧</i><i>✦</i><i>♡</i><i>✧</i><i>✦</i>
+ </div>
+ <p class="preview-caption">POST-MIDNIGHT PREVIEW · THIS IS WHAT REPLACES THE COUNTDOWN</p>
+</section>
+<section id="reasons">
+ <div class="section-kicker">A few things I adore about you</div><h2 class="section-title">I know I was never able to express why I love you so much when we talk, so I'll try to convey my feelings here.</h2>
+ <p class="section-intro">A few thoughts I've wanted you to know, Moni Ji. ♡</p>
+ <div class="reasons">
+  <article class="reason"><div class="num">01 · The way you are</div><p>Your extroverted nature, the way you express yourself, I hope you never lose that beautiful part of yourself.</p></article>
+  <article class="reason"><div class="num">02 · A year, and still</div><p>I know it's been a year since we've been together, but I still get a smile whenever I think about you.</p></article>
+  <article class="reason"><div class="num">03 · My favourite goblin</div><p>I know I might roast you a little too much, but I can't help it… hehehe. Goblin. 😭</p>
+   <svg class="grogu" viewBox="0 0 180 105" role="img" aria-label="A tiny green space-fantasy alien with big ears">
+    <ellipse cx="90" cy="57" rx="30" ry="35" fill="#8eaa79"/>
+    <path d="M68 39 Q23 9 7 29 Q24 58 68 57Z M112 39 Q157 9 173 29 Q156 58 112 57Z" fill="#a9c99a" stroke="#718e69" stroke-width="3"/>
+    <path d="M59 72 Q90 59 121 72 L128 103 L52 103Z" fill="#b58b62"/>
+    <ellipse cx="78" cy="55" rx="4.5" ry="6" fill="#253328"/><ellipse cx="102" cy="55" rx="4.5" ry="6" fill="#253328"/>
+    <path d="M83 70 Q90 76 97 70" fill="none" stroke="#526b4b" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="76" cy="64" r="5" fill="#d58f83" opacity=".65"/><circle cx="104" cy="64" r="5" fill="#d58f83" opacity=".65"/>
+   </svg>
+  </article>
+  <article class="reason"><div class="num">04 · That smile</div><p>And the way you laugh, it just makes my day. I can't describe what that smile does to me.</p></article>
+ </div>
+</section>
+
+<section id="constellation" class="magic-section">
+ <div class="section-kicker">A little piece of our universe</div>
+ <h2 class="section-title">Connect the stars, Moni Ji</h2>
+ <p class="section-intro">Tap each little star and uncover a thought I've kept just for you. Find them all to reveal our constellation. ✨</p>
+ <div class="star-sky" id="starSky">
+  <svg class="heart-lines" viewBox="0 0 320 250" aria-hidden="true"><path d="M160 205 C125 175 42 119 65 67 C85 22 139 47 160 82 C181 47 235 22 255 67 C278 119 195 175 160 205Z"/></svg>
+  <button class="secret-star s1" aria-label="Secret star one">✦</button>
+  <button class="secret-star s2" aria-label="Secret star two">✧</button>
+  <button class="secret-star s3" aria-label="Secret star three">✦</button>
+  <button class="secret-star s4" aria-label="Secret star four">✧</button>
+  <button class="secret-star s5" aria-label="Secret star five">✦</button>
+  <button class="secret-star s6" aria-label="Secret star six">✧</button>
+  <div class="star-message" id="starMessage">Every star has a little something to tell you. ♡</div>
+  <div class="star-progress" id="starProgress">0 of 6 stars found</div>
+ </div>
+ <div class="constellation-finale" id="constellationFinale">Our little universe looks brighter with you in it. ♡</div>
+</section>
+
+<section id="letter">
+ <div class="section-kicker">Sealed with a little love</div><h2 class="section-title">A letter, just for you</h2>
+ <p class="section-intro">Some feelings deserve more than a text message. Tap the letter to open it. 💌</p>
+ <div class="letter-area">
+  <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open Aryan's letter">
+   <div class="wax">A ♡</div><h3>To my favourite person</h3><p>A little note from Aryan, written with love.</p><span style="font-size:.65rem;letter-spacing:.17em;text-transform:uppercase">Tap to unfold · ✧</span>
+  </div>
+  <div class="letter" id="letterContent">
+   <p>My dearest Moni Ji,</p>
+   <p>Happy Birthday to the person who makes life feel a little more magical. I hope today reminds you of how special you are, how much you deserve, and how deeply you are appreciated.</p>
+   <p>I know you're stressed about your exam and can't stop thinking about it, but I just want to tell you that I believe you can do it (no pressure 😭 zyada tang nahi karunga).</p>
+   <p>I just want you to stop underestimating yourself and believe in yourself the way I do. 💟</p>
+   <p>I may not have a universe to give you, but I hope I can make your little corner of it feel safe, warm, and full of love. May this new year bring you beautiful surprises, endless reasons to smile, and dreams that find their way to you.</p>
+   <p>And if life ever gets cloudy, remember this: you are someone's favourite thought, someone's answered wish, and someone worth celebrating every single day.</p>
+   <p>Keep shining in your own beautiful way. The world is brighter with you in it.</p>
+   <p class="sign">Always cheering for you,<br><strong>Aryan</strong> ♡</p>
+  </div>
+ </div>
+</section>
+<section id="surprise">
+ <div class="section-kicker">One last little thing</div><h2 class="section-title">A gift from the heart</h2>
+ <p class="section-intro">Not everything beautiful comes wrapped in a box. But this little one has a message inside.</p>
+ <div class="surprise-box">
+  <div class="gift" id="gift" role="button" tabindex="0" aria-label="Open birthday gift"><div class="gift-base"></div><div class="gift-lid"></div><div class="ribbon-v"></div><div class="bow"></div></div>
+  <button class="pill" id="giftButton">Open your little surprise ♡</button>
+  <div class="reveal" id="reveal"><h3>Make a wish, Moni Ji. ✨</h3>
+   <p class="gift-poem serif">I know we've had a few misunderstandings and fights, too, but in the end, all I can say is that I love you more than anyone else ever could. I know we sometimes don't get to talk for a while, but I guess beautiful things take time. ♡</p>
+   <p>May every little wish tucked inside your heart find its way to the stars. May you laugh louder, love deeper, grow fearlessly, and always know how precious you are.</p><p class="serif" style="font-size:1.35rem;color:#f4b9d0">The best part of this world is that it has you in it.</p></div>
+ </div>
+</section>
+
+<section id="birthdayCake" class="magic-section cake-section">
+ <div class="section-kicker">A birthday wish, just for you</div>
+ <h2 class="section-title">Make a wish, Moni Ji</h2>
+ <p class="section-intro">Close your eyes, make your sweetest wish, then tap the candles. 🎂</p>
+ <div class="cake-stage">
+  <div class="cake">
+   <div class="flames" id="flames"><i></i><i></i><i></i></div>
+   <div class="candles"><span></span><span></span><span></span></div>
+   <div class="cake-top"></div><div class="cake-middle"></div><div class="cake-bottom"></div>
+   <div class="cake-plate"></div>
+  </div>
+ </div>
+ <button class="pill" id="blowCandles">Blow out the candles ♡</button>
+ <div class="cake-message" id="cakeMessage">May every wish you make find its way to you. 💗</div>
+</section>
+
+<section class="final">
+ <div class="section-kicker">Until the next chapter</div>
+ <div class="big">Happy Birthday,<br><em>Moni Ji.</em></div>
+ <p>Here's to more laughter, more dreams, more beautiful beginnings, and a year that loves you as much as I do.</p>
+ <div class="signature final-signature" aria-label="With love, Aryan">With love, Aryan <span>♡</span></div>
+ <div style="margin-top:35px"><button class="pill" id="petalButton">Bas yahi kehna tha ♡</button></div>
+</section>
+</main>
+<footer>CRAFTED WITH <span>♥</span> FOR MONI JI · 22 NOVEMBER 2026</footer>
+
+<div class="love-glow" id="loveGlow" aria-hidden="true">
+ <div class="love-glow-card"><div class="love-glow-heart">♡</div><div class="love-glow-words">I love you, Ma'am</div><div class="love-glow-small">always, in every little moment</div></div>
+</div>
+
+<button class="timer-butterfly" type="button" aria-label="Tap the butterfly to hear love you" title="Tap me ♡">
+ <svg viewBox="0 0 160 140" role="img" aria-label="A delicate pink butterfly">
+  <defs>
+   <linearGradient id="wingPink" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fffdfd"/><stop offset=".28" stop-color="#ffeaf2"/>
+    <stop offset=".62" stop-color="#f5b2cc"/><stop offset="1" stop-color="#c96896"/>
+   </linearGradient>
+   <linearGradient id="wingShade" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#c45e8b" stop-opacity=".3"/>
+   </linearGradient>
+   <radialGradient id="wingPearl"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f7bfd4"/></radialGradient>
+   <linearGradient id="bodyPink" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#63304d"/><stop offset=".5" stop-color="#b65a83"/><stop offset="1" stop-color="#63304d"/>
+   </linearGradient>
+   <filter id="butterflyGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+   </filter>
+  </defs>
+  <g class="wing wing-left">
+   <path d="M77 65 C61 27 27 8 13 27 C-1 48 20 81 57 86 C34 101 43 126 61 117 C77 109 82 84 77 65Z" fill="url(#wingPink)" stroke="#fff8fb" stroke-width="2"/>
+   <path d="M72 68 C52 35 27 24 17 34 C30 31 49 47 64 77 M63 85 Q48 82 39 98 M64 89 Q58 107 57 115" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
+   <path d="M17 48 Q29 39 42 51 Q30 63 17 48Z M28 76 Q39 68 48 79 Q38 88 28 76Z" fill="url(#wingPearl)" opacity=".9"/>
+   <circle cx="25" cy="57" r="3" fill="#fff" opacity=".9"/><circle cx="49" cy="96" r="2.4" fill="#fff" opacity=".85"/>
+   <path d="M18 29 Q35 17 52 38" fill="none" stroke="#fff" stroke-width="2" opacity=".65" stroke-linecap="round"/>
+  </g>
+  <g class="wing wing-right">
+   <path d="M83 65 C99 27 133 8 147 27 C161 48 140 81 103 86 C126 101 117 126 99 117 C83 109 78 84 83 65Z" fill="url(#wingPink)" stroke="#fff8fb" stroke-width="2"/>
+   <path d="M88 68 C108 35 133 24 143 34 C130 31 111 47 96 77 M97 85 Q112 82 121 98 M96 89 Q102 107 103 115" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
+   <path d="M143 48 Q131 39 118 51 Q130 63 143 48Z M132 76 Q121 68 112 79 Q122 88 132 76Z" fill="url(#wingPearl)" opacity=".9"/>
+   <circle cx="135" cy="57" r="3" fill="#fff" opacity=".9"/><circle cx="111" cy="96" r="2.4" fill="#fff" opacity=".85"/>
+   <path d="M142 29 Q125 17 108 38" fill="none" stroke="#fff" stroke-width="2" opacity=".65" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#butterflyGlow)">
+   <ellipse cx="80" cy="76" rx="5.5" ry="27" fill="url(#bodyPink)"/>
+   <ellipse cx="80" cy="56" rx="4.2" ry="7" fill="#f8d0df"/>
+   <path d="M79 51 Q64 22 58 30 M81 51 Q96 22 102 30" fill="none" stroke="#6d3654" stroke-width="2" stroke-linecap="round"/>
+   <circle cx="58" cy="30" r="3" fill="#f5b4cd" stroke="#fff" stroke-width="1"/>
+   <circle cx="102" cy="30" r="3" fill="#f5b4cd" stroke="#fff" stroke-width="1"/>
+   <ellipse cx="70" cy="77" rx="3.2" ry="2.2" fill="#f28eae"/><ellipse cx="90" cy="77" rx="3.2" ry="2.2" fill="#f28eae"/>
+   <path d="M76 84 Q80 88 84 84" fill="none" stroke="#fff5f8" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g class="butterfly-sparkles" fill="#fff5fa">
+   <path d="M25 17 L27 23 L33 25 L27 27 L25 33 L23 27 L17 25 L23 23Z"/>
+   <path d="M135 91 L137 96 L142 98 L137 100 L135 105 L133 100 L128 98 L133 96Z"/>
+   <circle cx="119" cy="14" r="2"/><circle cx="39" cy="119" r="2"/>
+  </g>
+ </svg>
+ <span class="butterfly-love" aria-live="polite">love you ♡</span>
+</button>
+
+<script>
+
+const envelope=document.getElementById('envelope'),letter=document.getElementById('letterContent');
+function openLetter(){letter.classList.toggle('open');envelope.querySelector('span').textContent=letter.classList.contains('open')?'A little love, unfolded ♡':'Tap to unfold · ✧';if(letter.classList.contains('open'))letter.scrollIntoView({behavior:'smooth',block:'center'})}
+envelope.addEventListener('click',openLetter);envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLetter()}});
+const gift=document.getElementById('gift'),reveal=document.getElementById('reveal');
+const giftButton=document.getElementById('giftButton');
+let giftIsOpen=false,giftAnimating=false;
+function openGift(){
+ if(giftAnimating)return;
+ if(!giftIsOpen){
+  giftAnimating=true;gift.classList.add('opening');
+  giftButton.textContent='A little surprise for you… ♡';
+  petals(24);
+  setTimeout(()=>{
+   gift.classList.remove('opening');gift.classList.add('open');
+   reveal.classList.add('show');giftIsOpen=true;giftAnimating=false;
+   giftButton.textContent='Close your surprise ♡';
+   reveal.scrollIntoView({behavior:'smooth',block:'center'});
+  },620);
+ }else{
+  giftAnimating=true;gift.classList.remove('open');
+  reveal.classList.remove('show');
+  giftButton.textContent='Open your little surprise ♡';
+  setTimeout(()=>{giftIsOpen=false;giftAnimating=false;},420);
+ }
+}
+gift.addEventListener('click',openGift);gift.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openGift()}});
+giftButton.addEventListener('click',openGift);
+function petals(amount=14){const chars=['❀','🌸','♡','🌷'];for(let i=0;i<amount;i++){const el=document.createElement('div');el.className='petal';el.textContent=chars[Math.floor(Math.random()*chars.length)];el.style.left=Math.random()*100+'vw';el.style.fontSize=(15+Math.random()*18)+'px';el.style.color=['#ffb6cc','#ffc9d8','#f7a8c4','#ffe0e8'][Math.floor(Math.random()*4)];el.style.animationDuration=(4+Math.random()*5)+'s';el.style.opacity=.4+Math.random()*.6;document.body.appendChild(el);setTimeout(()=>el.remove(),9500)}}
+function showLoveMessage(){
+ const scene=document.getElementById('loveGlow');
+ scene.classList.remove('show');
+ void scene.offsetWidth;
+ scene.classList.add('show');
+ setTimeout(()=>scene.classList.remove('show'),3000);
+}
+document.getElementById('petalButton').addEventListener('click',showLoveMessage);
+
+let petalTimer=setTimeout(()=>petals(9),1600);
+
+// Real button interaction: tap/click the butterfly to reveal its message.
+const butterfly=document.querySelector('.timer-butterfly');
+let loveHideTimer=null;
+if(butterfly){
+ butterfly.addEventListener('click',()=>{
+  butterfly.classList.add('love-visible');
+  if(loveHideTimer)clearTimeout(loveHideTimer);
+  loveHideTimer=setTimeout(()=>butterfly.classList.remove('love-visible'),2200);
+ });
+}
+
+// Hidden star messages and heart constellation.
+const starThoughts=[
+ "Your smile is one of my favourite places to be. ♡",
+ "Even ordinary days feel special when I think of you.",
+ "I hope you never forget how wonderfully you shine.",
+ "A year with you, and you still give me butterflies.",
+ "You are my favourite hello and my hardest goodbye.",
+ "If the stars had a favourite, they'd choose you too. ✨"
+];
+let starsFound=new Set();
+document.querySelectorAll('.secret-star').forEach((star,index)=>{
+ star.addEventListener('click',()=>{
+  star.classList.add('found');starsFound.add(index);
+  document.getElementById('starMessage').textContent=starThoughts[index];
+  document.getElementById('starProgress').textContent=starsFound.size+' of 6 stars found';
+  if(starsFound.size===6)document.getElementById('constellationFinale').classList.add('show');
+ });
+});
+// Birthday cake: tapping extinguishes the candles and reveals a wish.
+document.getElementById('blowCandles').addEventListener('click',()=>{
+ const flames=document.getElementById('flames');
+ flames.classList.add('out');
+ document.getElementById('cakeMessage').textContent='Wish made! May this year bring you all the happiness you deserve. Happy Birthday, Moni Ji! ♡';
+ document.getElementById('blowCandles').textContent='Wish sent with love ♡';
+ document.getElementById('blowCandles').disabled=true;
+});
+// Final secret note.
+document.getElementById('lastSecretButton').addEventListener('click',()=>{
+ document.getElementById('lastSecret').classList.toggle('show');
+ document.getElementById('lastSecretButton').textContent=document.getElementById('lastSecret').classList.contains('show')?'A secret just for you ♡':'One last little secret…';
+});
+// Add a soft trail of tiny hearts while the butterfly is being moved.
+let lastSparkAt=0;
+document.addEventListener('pointermove',event=>{
+ if(!butterflyFollowing)return;
+ const now=Date.now();if(now-lastSparkAt<55)return;lastSparkAt=now;
+ const spark=document.createElement('span');spark.className='love-spark';spark.textContent=['♡','✧','♥'][Math.floor(Math.random()*3)];
+ spark.style.left=event.clientX+'px';spark.style.top=event.clientY+'px';
+ spark.style.fontSize=(10+Math.random()*10)+'px';document.body.appendChild(spark);
+ setTimeout(()=>spark.remove(),850);
+});
+
+</script>
+
+
+
+
+</body>
+</html>
